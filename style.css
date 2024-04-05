@@ -1,105 +1,126 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto',sans-serif;
-}
-.container{
-	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(C:/Users/abdal/Downloads/images-20240311T191303Z-001/images/Background.jpg);
-	background-position: center;
-	background-size: cover;
-	padding-left: 8%;
-	padding-right: 8%;
-	box-sizing: border-box;
-}
-.navbar{
-	height: 12%;
-	display: flex;
-	align-items: center;
-}
-.logo{
-	width: 80px;
-	cursor: pointer;
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; 
+    color: #ffffff; 
 }
 
-nav{
-	flex: 1;
-	text-align: right;
+#terminal {
+    background-color: #000000; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); 
 }
-nav ul li{
-	list-style: none;
-	display: inline-block;
-	margin-left: 50px;
+
+#terminal-header {
+    display: flex;
+    align-items: center;
 }
-nav ul li a{
-	text-decoration: none;
-	color:#fff;
-	font-size: 15px;
+
+#terminal-icon {
+    font-size: 20px;
+    color: #00ff00; 
+    margin-right: 10px;
 }
-.row{
-	display: flex;
-	height: 80%;
-	align-items: center;
+
+#terminal-title {
+    color: #ffffff;
+    font-size: 18px;
 }
-.col{
-	flex-basis: 50%;
+
+#terminal-content {
+    margin-top: 20px;
+    line-height: 1.
 }
+
+.social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333333;
+    border: 1px solid #00ff00; 
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #00ff00; 
+    color: #333333; 
+}
+
+h1{ 
+    display: flex;
+    width: 23vw;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #000000;
+    color: #fff;
+    font-size: 45px;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: -7px;
+  }
+
 h1{
-	color: #fff;
-	font-size: 100px;
+  animation: glitch 1s linear infinite;
+}
 
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
 }
-p{
-	color: #fff;
-	font-size: 15px;
-	line-height: 20px;
+
+h1:before,
+h1:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
 }
-button{
-	width: 100px;
-	color: #000;
-	font-size: 15px;
-	padding: 12px 0;
-	background: #fff;
-	border: 0;
-	border-radius: 20px;
-	outline: none;
-	margin-top:30px;
+
+h1:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
-.card{
-	width: 100px;
-	height: 100px;
-	display: inline-block;
-	border-radius: 70px;
-	padding:70px 50px;
-	box-sizing: border-box;
-	cursor: pointer;
-	margin: 10px 15px;
-	background-position: center;
-	background-size: cover; 
-	transition: transform 0.5s;
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
 }
-.card1{
-background-image: url(C:/Users/abdal/Downloads/images-20240311T191303Z-001/images/download1.png);	
+
+h1:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
-.card2{
-background-image: url(C:/Users/abdal/Downloads/images-20240311T191303Z-001/images/download.png);	
-}
-.card3{
-	background-image: url(C:/Users/abdal/Downloads/images-20240311T191303Z-001/images/download.jpeg);	
-	}
-.card:hover{
-	transform: translateY(-10px);
-}
-h2{
-	color: #fff;
-	text-shadow: 0 0 5px #000;
-	
-}
-.card p{
-	text-shadow: 5px 5px 5px #000;
-	font-size: 10px;
-}
-li {
-	color: white; 
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
 }
