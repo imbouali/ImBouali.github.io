@@ -1,73 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdallah Bouali - My Website</title>
+    <title>My website</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <div id="terminal">
-        <div id="terminal-header">
-            <div id="terminal-icon">&#9658;</div>
-            <div id="terminal-title">Welcome!</div>
+
+    <header class="header">
+        <a href="#home" class="logo">Bouali 
+        <span>Abdallah </span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home"  class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1 class="text-animation">Hi, it's <span></span></h1>
+            <h3>I'm a preparatory classes student from Morocco</h3>
+            <p>My academic journey is deeply rooted in my passion for mathematics, physics, and computer science. I'm particularly fascinated by the realms of artificial intelligence and cybersecurity, where I believe the future of technology lies. Through this platform, I hope to share my insights, and some open source projects as I navigate the exciting world of engineering and technology. Thank you for visiting, and I'll be happy to recieve feedback and pull requests from like-minded individuals and enthusiasts. 😉</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/abdallah-bouali-24a37a183/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/imbouali"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/abdallehbouali/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://x.com/AbdallahBouali6?mx=2"><i class='bx bxl-twitter'></i></a>
+            </div>
+
+            <audio controls autoplay><source src="Mr. Robot - Where Is My Mind.mp3"></audio>
+            
         </div>
+            <div class="home-img">
+                <img src="_9081adc8-ec71-48aa-a833-74c6deea47d5.jpeg" alt="">
+            </div>
+    </section>
 
-        <div id="terminal-content">
-            <p>>>> Welcome to my personal website , I'm a prepatory classes student.</p>
-            <p>>>> trying to survive and geting a chance to learn about my passion (cyber-security and ai).</p>
-            <p>>>> if you reading this in some how don't forget to send me a feed back, and prayin for me to survive! ;</p>
+    <section class="skills" id="skills">
+        <h2 class="heading">Skills</h2>
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>MATHEMATICS / PHYSICS</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>LINUX / WINDOWS</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>HTML5 / CSS3</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>JAVA SCRIPT</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>PYTHON</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>C++</h3>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>LUA</h3>
+                    </div>
+                
+            </div>
         </div>
-
-        <header>
-            <h1>Abdallah Bouali</h1>
-            <p>//a survivor\\</p>
-        </header>
-
-        <section id="skills">
-            <h2>#Skills</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>PYTHON</li>
-                <li>LINUX</li>
-                <li>MATH\PHYSICS</li>
-                <li>PLAYING (mb making) VIDEO GAMES?</li>
-            </ul>
-        </section>
-
-        <section id="portfolio">
-
-
-            <div class="project">
-                <h3>#Project_0</h3>
-                <p>This is my first published project.</p>
+    </section>
+    <sction class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>CPGE Heaven</h4>
+                    <p>A python application provide all cpge lecons and some aditional mathematical and physics tools developped by me.(currenttly still working on you'll find it in my github when im donne)</p>
+                </div>
             </div>
 
-            <div class="project">
-                <h3>#futer project</h3>
-                <p>stay tuned.</p>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Asteroids</h4>
+                    <p>A funny game i'm working on</p>
+                </div>
             </div>
-
-        </section>
-        <section id="contact">
-            <h2>#Contact_me</h2>
-            <div id="social-icons">
-
-                <a href="https://twitter.com/AbdallahBouali6" class="social-link" target="_blank">X</a>
-                <a href="https://www.linkedin.com/in/abdallah-bouali-24a37a183/"class="social-link" target="_blank">LinkedIn</a>
-                <a href="https://github.com/imbouali"class="social-link" target="_blank">GitHub</a>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Comming soon</h4>
+                    <p>Commimg soon</p>
+                </div>
             </div>
-        </section>
-    <footer>
-            <p>&copy; 2024 Abdallah Bouali. All rights reserved.</p>
-            <h6>this modest web site is fully made by self learnig skills, in an exam day night</h6>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Comming soon</h4>
+                    <p>Commimg soon</p>
+                </div>
+            </div>
+        </div>
+    </sction>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-discord-alt'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+        </div>
+        
+        <p class="copyright">© 2024 Abdallah Bouali. All rights reserved.</p>
     </footer>
-    <div class="screen">
-   <div id="screen" class="terminal_emulator"></div>
-</div>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
