@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint . --quiet",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc -p ./jsconfig.json",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^17.0.0",
