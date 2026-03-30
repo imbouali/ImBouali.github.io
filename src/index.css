@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+
+    --background: 220 20% 4%;
+    --foreground: 150 60% 90%;
+    --card: 220 18% 7%;
+    --card-foreground: 150 60% 90%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 150 60% 90%;
+    --primary: 142 70% 45%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 150 30% 75%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 270 60% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 142 70% 45%;
+    --chart-1: 142 70% 45%;
+    --chart-2: 270 60% 55%;
+    --chart-3: 200 80% 50%;
+    --chart-4: 45 90% 55%;
+    --chart-5: 0 80% 55%;
+    --radius: 0.5rem;
+    --sidebar-background: 220 18% 7%;
+    --sidebar-foreground: 150 60% 90%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 150 60% 90%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 142 70% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 150 60% 90%;
+    --card: 220 18% 7%;
+    --card-foreground: 150 60% 90%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 150 60% 90%;
+    --primary: 142 70% 45%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 150 30% 75%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 270 60% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 142 70% 45%;
+    --chart-1: 142 70% 45%;
+    --chart-2: 270 60% 55%;
+    --chart-3: 200 80% 50%;
+    --chart-4: 45 90% 55%;
+    --chart-5: 0 80% 55%;
+    --sidebar-background: 220 18% 7%;
+    --sidebar-foreground: 150 60% 90%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 150 60% 90%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(220 20% 4%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(142 70% 45% / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(142 70% 45% / 0.5);
+}
+
+/* Glow effect for terminal elements */
+.glow-green {
+  text-shadow: 0 0 10px hsl(142 70% 45% / 0.5), 0 0 20px hsl(142 70% 45% / 0.2);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px hsl(142 70% 45% / 0.1), inset 0 0 15px hsl(142 70% 45% / 0.05);
+}
