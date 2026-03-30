@@ -4,13 +4,11 @@ import { fileURLToPath, URL } from 'url'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  logLevel: 'error', // Suppress warnings, only show errors
-  plugins: [
-    react(),
-  ]
-});
+  plugins: [react()],
+})
