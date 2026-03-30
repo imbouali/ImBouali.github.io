@@ -20,19 +20,19 @@ export default function ContactSection() {
           </div>
 
           <p className="font-sans text-secondary-foreground mb-10 max-w-lg mx-auto">
-            Je suis actuellement à la recherche d'une alternance de 36 mois.
-            N'hésitez pas à me contacter pour toute opportunité.
+            Je suis actuellement ï¿½ la recherche d'une alternance de 36 mois.
+            N'hï¿½sitez pas ï¿½ me contacter pour toute opportunitï¿½.
           </p>
 
           <div className="bg-card/50 border border-border rounded-lg p-6 sm:p-8 glow-border max-w-md mx-auto">
             <div className="space-y-4">
               <a
-                href="mailto:abdallah.bouali.01@gmail.com"
+                href="mailto:contact@bouali.tech"
                 className="flex items-center gap-3 p-3 rounded-md hover:bg-secondary transition-colors group"
               >
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <span className="font-mono text-sm text-secondary-foreground group-hover:text-foreground transition-colors truncate">
-                  abdallah.bouali.01@gmail.com
+                  contact@bouali.tech
                 </span>
                 <ExternalLink className="w-3 h-3 text-muted-foreground ml-auto shrink-0" />
               </a>

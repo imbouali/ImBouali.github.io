@@ -97,7 +97,7 @@ export default function HeroSection() {
           className="flex flex-wrap items-center justify-center gap-4 mb-12"
         >
           <a
-            href="mailto:abdallah.bouali.01@gmail.com"
+            href="mailto:contact@bouali.tech"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-sm rounded-md hover:bg-primary/90 transition-colors"
           >
             <Mail className="w-4 h-4" />
