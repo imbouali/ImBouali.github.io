@@ -20,8 +20,8 @@ export default function ContactSection() {
           </div>
 
           <p className="font-sans text-secondary-foreground mb-10 max-w-lg mx-auto">
-            Je suis actuellement � la recherche d'une alternance de 36 mois.
-            N'h�sitez pas � me contacter pour toute opportunit�.
+            Je suis actuellement a la recherche d'une alternance de 36 mois.
+            N'hesitez pas a me contacter pour toute opportunite.
           </p>
 
           <div className="bg-card/50 border border-border rounded-lg p-6 sm:p-8 glow-border max-w-md mx-auto">
