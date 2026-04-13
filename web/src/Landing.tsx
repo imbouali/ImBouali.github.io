@@ -539,7 +539,7 @@ export default function Home() {
                     Explores the future of cryptography in the quantum era.
                   </div>
                   <a
-                    href="/presentation_complete.pdf"
+                    href={`${import.meta.env.BASE_URL}presentation_complete.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-secondary hover:text-primary transition-colors text-sm inline-flex items-center gap-2"
