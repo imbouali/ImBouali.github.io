@@ -1,5 +1,6 @@
 import { ArrowRight, Github } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import introTrack from "../intro.mp3";
 
 /**
  * Cybersecurity Portfolio - Linux Terminal Theme
@@ -95,8 +96,9 @@ export default function Home() {
         className="hidden"
         onPlay={() => setAudioPlaying(true)}
         onPause={() => setAudioPlaying(false)}
+        onError={() => setAudioBlocked(true)}
       >
-        <source src="/intro.mp3" type="audio/mpeg" />
+        <source src={introTrack} type="audio/mpeg" />
       </audio>
 
       {(audioBlocked || !audioPlaying) && (
