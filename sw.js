@@ -1,4 +1,4 @@
-const CACHE = 'cyber-abdallah-v15';
+﻿const CACHE = 'cyber-abdallah-v16';
 const ASSETS = [
   '/', '/index.html', '/favicon.svg', '/manifest.json',
   '/css/styles.css',
@@ -22,3 +22,4 @@ self.addEventListener('fetch', e => {
     caches.match(e.request).then(cached => cached || fetch(e.request))
   );
 });
+
