@@ -5,7 +5,7 @@ let lang = 'fr';
 const ABDALLAH = {
   name:       'Bouali Abdallah',
   status:     'À la recherche active d\'un contrat d\'apprentissage. Admis à l\'ISTP Mines Saint-Étienne (2026-2029) — cherche une entreprise partenaire pour signer le contrat.',
-  email:      'abdallah.bouali.01@gmail.com',
+  email:      'contact@bouali.tech',
   phone:      '+33748450839',
   linkedin:   'linkedin.com/in/abdallah-bouali-24a37a183/',
   github:     'github.com/imbouali',
@@ -98,7 +98,7 @@ const T = {
         id: 'apprenticeship', icon: '🌌',
         name: 'MISSION\nPRINCIPALE', status: '[ OBJECTIF ACTIF ]',
         title: '// TERMINAL MISSION //', desc: 'Recherche d\'Apprentissage',
-        intro: `TERMINAL MISSION ACTIF. OBJECTIF EN COURS...\n\n🎯 STATUT : EN RECHERCHE ACTIVE D'UN CONTRAT D'APPRENTISSAGE\n\nAdmis à l'ISTP Mines Saint-Étienne — formation ingénieur Électronique & Systèmes Embarqués (2026-2029). Il me manque une entreprise partenaire pour démarrer.\n\n✅ Disponible : dès que possible / rentrée 2026\n✅ Contrat : Contrat d'apprentissage\n✅ Domaines : Systèmes Embarqués, Électronique, IoT, Cybersécurité, Industrie 4.0\n✅ Rythme : 3 semaines entreprise / 4 semaines école\n\n📡 CONTACT (cliquez pour copier) :\nEmail : abdallah.bouali.01@gmail.com\nTél : +33748450839\nLinkedIn : linkedin.com/in/abdallah-bouali-24a37a183/\nGitHub : github.com/imbouali\n\nVotre entreprise cherche un apprenti passionné ? Je suis votre candidat.`,
+        intro: `TERMINAL MISSION ACTIF. OBJECTIF EN COURS...\n\n🎯 STATUT : EN RECHERCHE ACTIVE D'UN CONTRAT D'APPRENTISSAGE\n\nAdmis à l'ISTP Mines Saint-Étienne — formation ingénieur Électronique & Systèmes Embarqués (2026-2029). Il me manque une entreprise partenaire pour démarrer.\n\n✅ Disponible : dès que possible / rentrée 2026\n✅ Contrat : Contrat d'apprentissage\n✅ Domaines : Systèmes Embarqués, Électronique, IoT, Cybersécurité, Industrie 4.0\n✅ Rythme : 3 semaines entreprise / 4 semaines école\n\n📡 CONTACT (cliquez pour copier) :\nEmail : contact@bouali.tech\nTél : +33748450839\nLinkedIn : linkedin.com/in/abdallah-bouali-24a37a183/\nGitHub : github.com/imbouali\n\nVotre entreprise cherche un apprenti passionné ? Je suis votre candidat.`,
         choices: ['Pourquoi l\'alternance ingénieur ?', 'Quels secteurs t\'intéressent ?', 'Comment te contacter ?', 'Quelle est ta disponibilité ?']
       }
     ]
@@ -182,7 +182,7 @@ const T = {
         id: 'apprenticeship', icon: '🌌',
         name: 'MAIN\nMISSION', status: '[ ACTIVE OBJECTIVE ]',
         title: '// MISSION TERMINAL //', desc: 'Seeking Apprenticeship',
-        intro: `MISSION TERMINAL ACTIVE. LIVE OBJECTIVE LOADED...\n\n🎯 STATUS: ACTIVELY SEEKING AN APPRENTICESHIP CONTRACT\n\nAdmitted to ISTP Mines Saint-Étienne — Engineering Electronics & Embedded Systems (2026-2029). I need a partner company to sign the contract.\n\n✅ Available: ASAP / September 2026\n✅ Contract: French apprenticeship (contrat d'apprentissage)\n✅ Domains: Embedded Systems, Electronics, IoT, Cybersecurity, Industry 4.0\n✅ Rhythm: 3 weeks company / 4 weeks school\n\n📡 CONTACT (click to copy):\nEmail: abdallah.bouali.01@gmail.com\nPhone: +33748450839\nLinkedIn: linkedin.com/in/abdallah-bouali-24a37a183/\nGitHub: github.com/abdallah-bouali\n\nLooking for a motivated apprentice? I am your candidate.`,
+        intro: `MISSION TERMINAL ACTIVE. LIVE OBJECTIVE LOADED...\n\n🎯 STATUS: ACTIVELY SEEKING AN APPRENTICESHIP CONTRACT\n\nAdmitted to ISTP Mines Saint-Étienne — Engineering Electronics & Embedded Systems (2026-2029). I need a partner company to sign the contract.\n\n✅ Available: ASAP / September 2026\n✅ Contract: French apprenticeship (contrat d'apprentissage)\n✅ Domains: Embedded Systems, Electronics, IoT, Cybersecurity, Industry 4.0\n✅ Rhythm: 3 weeks company / 4 weeks school\n\n📡 CONTACT (click to copy):\nEmail: contact@bouali.tech\nPhone: +33748450839\nLinkedIn: linkedin.com/in/abdallah-bouali-24a37a183/\nGitHub: github.com/abdallah-bouali\n\nLooking for a motivated apprentice? I am your candidate.`,
         choices: ['Why an engineering apprenticeship?', 'What industries interest you?', 'How to contact you?', 'What is your availability?']
       }
     ]
