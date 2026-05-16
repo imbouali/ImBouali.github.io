@@ -1,5 +1,10 @@
 server.js
 node_modules/
 cyber_abdallah_portfolio.html
+dist/
+.env
+.env.*
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
