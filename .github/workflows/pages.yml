@@ -26,11 +26,11 @@ jobs:
 
       - name: Inject API config
         run: |
-          printf "const GEMINI_KEY = '%s';\n" "$GEMINI_KEY" > js/config.js
-          printf "const GEMINI_URL = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=\${GEMINI_KEY}\`;\n" >> js/config.js
+          printf "const GEMINI_KEY = '%s';\n" "$REQUESTY_KEY" > js/config.js
+          printf "const GEMINI_URL = 'https://router.requesty.ai/v1/chat/completions';\n" >> js/config.js
           printf "const ZONE_COUNT = 6;\n" >> js/config.js
         env:
-          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          REQUESTY_KEY: ${{ secrets.REQUESTY_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

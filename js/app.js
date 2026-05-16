@@ -506,10 +506,18 @@ async function askGemini(userMsg) {
   try {
     const res = await fetch(GEMINI_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GEMINI_KEY}`
+      },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: T[lang].sysPrompt + '\n\nUser: ' + userMsg }] }],
-        generationConfig: { maxOutputTokens: 300, temperature: 0.85 }
+        model: 'google/gemini-2.0-flash',
+        messages: [
+          { role: 'system', content: T[lang].sysPrompt },
+          { role: 'user',   content: userMsg }
+        ],
+        max_tokens:  300,
+        temperature: 0.85
       })
     });
 
@@ -519,13 +527,12 @@ async function askGemini(userMsg) {
     }
 
     const data  = await res.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text
+    const reply = data.choices?.[0]?.message?.content
       || (lang === 'fr' ? 'Pas de réponse.' : 'No response.');
 
     hideTyping();
     addChatMsg(reply, 'npc');
 
-    // Save to history
     if (currentZone) {
       if (!chatHistory[currentZone]) chatHistory[currentZone] = [];
       chatHistory[currentZone].push({ role: 'user', text: userMsg });
