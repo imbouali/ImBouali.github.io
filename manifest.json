@@ -1,0 +1,13 @@
+{
+  "name": "Cyber Abdallah — Portfolio",
+  "short_name": "Cyber Abdallah",
+  "description": "Portfolio interactif de Bouali Abdallah — Ingénieur Systèmes Embarqués en devenir",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060c06",
+  "theme_color": "#00ff41",
+  "orientation": "any",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

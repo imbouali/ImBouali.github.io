@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"    content="Portfolio de Bouali Abdallah — Major CPGE MP 19.17/20, admis ISTP Mines Saint-Étienne. Recherche contrat d'apprentissage Systèmes Embarqués 2026.">
+  <meta name="author"         content="Bouali Abdallah">
+  <meta name="keywords"       content="systèmes embarqués, FPGA, C++, cybersécurité, apprentissage, ISTP, Mines Saint-Étienne, CPGE MP">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Cyber Abdallah — Portfolio Ingénieur Systèmes Embarqués">
+  <meta property="og:description" content="Bouali Abdallah · Major CPGE MP 19.17/20 · Admis ISTP Mines Saint-Étienne · Recherche alternance Systèmes Embarqués 2026.">
+  <meta property="og:image"       content="favicon.svg">
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Cyber Abdallah — Portfolio">
+  <meta name="twitter:description" content="Ingénieur Systèmes Embarqués en devenir · FPGA · C++ · Cybersécurité">
+  <title>Cyber Abdallah — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00ff41">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Particles canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Galaxy star field background -->
+<svg class="pcb-bg" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="galaxy-pat" x="0" y="0" width="400" height="280" patternUnits="userSpaceOnUse">
+      <!-- White/blue-white stars (hot stars) -->
+      <circle cx="12"  cy="18"  r="1.4" fill="#f0eeff" opacity="0.9"/>
+      <circle cx="58"  cy="6"   r="1.0" fill="#ddd6fe" opacity="0.75"/>
+      <circle cx="105" cy="24"  r="1.6" fill="#f0eeff" opacity="0.85"/>
+      <circle cx="162" cy="10"  r="0.9" fill="#c4b5fd" opacity="0.8"/>
+      <circle cx="218" cy="30"  r="1.2" fill="#f0eeff" opacity="0.9"/>
+      <circle cx="275" cy="8"   r="1.5" fill="#ddd6fe" opacity="0.8"/>
+      <circle cx="340" cy="22"  r="1.0" fill="#f0eeff" opacity="0.7"/>
+      <circle cx="388" cy="14"  r="1.3" fill="#c4b5fd" opacity="0.75"/>
+      <!-- Purple/violet stars (nebula region) -->
+      <circle cx="35"  cy="65"  r="1.1" fill="#c084fc" opacity="0.65"/>
+      <circle cx="88"  cy="55"  r="0.8" fill="#a78bfa" opacity="0.6"/>
+      <circle cx="145" cy="72"  r="1.3" fill="#c084fc" opacity="0.7"/>
+      <circle cx="200" cy="58"  r="0.9" fill="#ddd6fe" opacity="0.8"/>
+      <circle cx="258" cy="70"  r="1.0" fill="#a78bfa" opacity="0.65"/>
+      <circle cx="315" cy="50"  r="1.4" fill="#c084fc" opacity="0.6"/>
+      <circle cx="370" cy="68"  r="0.8" fill="#ddd6fe" opacity="0.7"/>
+      <!-- Blue stars (hot young stars) -->
+      <circle cx="20"  cy="118" r="1.0" fill="#60a5fa" opacity="0.7"/>
+      <circle cx="72"  cy="108" r="1.5" fill="#93c5fd" opacity="0.75"/>
+      <circle cx="130" cy="125" r="0.9" fill="#60a5fa" opacity="0.65"/>
+      <circle cx="185" cy="112" r="1.2" fill="#dbeafe" opacity="0.8"/>
+      <circle cx="245" cy="130" r="1.0" fill="#60a5fa" opacity="0.7"/>
+      <circle cx="300" cy="115" r="1.3" fill="#93c5fd" opacity="0.65"/>
+      <circle cx="358" cy="122" r="0.9" fill="#60a5fa" opacity="0.6"/>
+      <!-- Yellow/warm stars (older stars) -->
+      <circle cx="48"  cy="158" r="1.1" fill="#fef3c7" opacity="0.7"/>
+      <circle cx="110" cy="170" r="0.8" fill="#fde68a" opacity="0.65"/>
+      <circle cx="168" cy="155" r="1.3" fill="#fef3c7" opacity="0.75"/>
+      <circle cx="225" cy="168" r="1.0" fill="#fbbf24" opacity="0.55"/>
+      <circle cx="285" cy="160" r="0.9" fill="#fef3c7" opacity="0.7"/>
+      <circle cx="345" cy="172" r="1.2" fill="#fde68a" opacity="0.6"/>
+      <!-- Dim background stars (galaxy haze) -->
+      <circle cx="30"  cy="40"  r="0.4" fill="#c4b5fd" opacity="0.35"/>
+      <circle cx="78"  cy="88"  r="0.5" fill="#e0d7ff" opacity="0.28"/>
+      <circle cx="140" cy="46"  r="0.4" fill="#c4b5fd" opacity="0.32"/>
+      <circle cx="195" cy="90"  r="0.5" fill="#e0d7ff" opacity="0.3"/>
+      <circle cx="250" cy="42"  r="0.4" fill="#c4b5fd" opacity="0.28"/>
+      <circle cx="308" cy="85"  r="0.5" fill="#e0d7ff" opacity="0.32"/>
+      <circle cx="365" cy="44"  r="0.4" fill="#c4b5fd" opacity="0.3"/>
+      <circle cx="15"  cy="195" r="0.5" fill="#e0d7ff" opacity="0.28"/>
+      <circle cx="95"  cy="210" r="0.4" fill="#c4b5fd" opacity="0.3"/>
+      <circle cx="155" cy="200" r="0.5" fill="#e0d7ff" opacity="0.25"/>
+      <circle cx="215" cy="215" r="0.4" fill="#c4b5fd" opacity="0.28"/>
+      <circle cx="275" cy="205" r="0.5" fill="#e0d7ff" opacity="0.3"/>
+      <circle cx="335" cy="218" r="0.4" fill="#c4b5fd" opacity="0.25"/>
+      <circle cx="392" cy="200" r="0.5" fill="#e0d7ff" opacity="0.28"/>
+      <!-- Star cluster (dense patch) -->
+      <circle cx="62"  cy="235" r="0.7" fill="#ddd6fe" opacity="0.5"/>
+      <circle cx="68"  cy="228" r="0.5" fill="#c4b5fd" opacity="0.45"/>
+      <circle cx="74"  cy="240" r="0.6" fill="#ddd6fe" opacity="0.48"/>
+      <circle cx="57"  cy="242" r="0.4" fill="#a78bfa" opacity="0.42"/>
+      <circle cx="70"  cy="248" r="0.5" fill="#ddd6fe" opacity="0.4"/>
+      <!-- Constellation lines (subtle) -->
+      <line x1="12"  y1="18"  x2="58"  y2="6"   stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.1"/>
+      <line x1="58"  y1="6"   x2="105" y2="24"  stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+      <line x1="145" cy="72" x2="200" y2="58"   stroke="#60a5fa" stroke-width="0.3" stroke-opacity="0.1"/>
+      <line x1="200" y1="58"  x2="258" y2="70"  stroke="#60a5fa" stroke-width="0.3" stroke-opacity="0.08"/>
+      <line x1="72"  y1="108" x2="130" y2="125" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.1"/>
+      <line x1="185" y1="112" x2="245" y2="130" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#galaxy-pat)"/>
+</svg>
+
+<div class="nebula-bg"></div>
+<div class="vignette"></div>
+<div class="transition-overlay" id="transition-overlay"></div>
+<div class="toast" id="toast"></div>
+
+<!-- Fixed controls -->
+<button class="recruiter-btn" id="recruiter-btn" onclick="toggleRecruiterMode()">📋 MODE CV</button>
+<button class="install-btn"   id="install-btn">⬇ Installer l'app</button>
+
+<div class="lang-switcher" id="lang-switcher" style="display:none">
+  <button class="ls-btn" id="ls-fr" onclick="switchLang('fr')">🇫🇷 FR</button>
+  <button class="ls-btn" id="ls-en" onclick="switchLang('en')">🇬🇧 EN</button>
+</div>
+
+<!-- ===== RECRUITER OVERLAY ===== -->
+<div class="recruiter-overlay" id="recruiter-view">
+  <button class="recruiter-close" onclick="toggleRecruiterMode()">✕ Fermer</button>
+  <div class="recruiter-inner" id="recruiter-inner"></div>
+</div>
+
+<!-- ===== CONTACT MODAL ===== -->
+<div class="contact-modal" id="contact-modal" onclick="if(event.target===this)closeContactModal()">
+  <div class="contact-modal-box">
+    <button class="contact-modal-close" onclick="closeContactModal()">✕</button>
+    <div class="contact-modal-title" id="contact-modal-title">Contact</div>
+    <div class="contact-modal-sub" id="contact-modal-sub">Envoyez un message direct</div>
+    <form id="contact-form" onsubmit="submitContact(event)">
+      <input  class="contact-field" name="name"    id="cf-name"    required autocomplete="name"/>
+      <input  class="contact-field" name="email"   id="cf-email"   required autocomplete="email" type="email"/>
+      <textarea class="contact-field" name="message" id="cf-msg"   required rows="4"></textarea>
+      <button class="contact-submit" id="contact-submit" type="submit"></button>
+    </form>
+  </div>
+</div>
+
+<div id="app">
+
+  <!-- ===== LANGUAGE SELECTION ===== -->
+  <div id="lang-screen" class="screen active">
+    <div class="lang-logo">CYBER<br><span>ABDALLAH</span></div>
+    <div class="lang-tagline">Galaxy · Robotics · Embedded Systems</div>
+    <div class="lang-divider">
+      <div class="lang-divider-line"></div>
+      <div class="lang-divider-via"></div>
+      <div class="lang-divider-line"></div>
+    </div>
+    <div class="lang-prompt">Choose your language / Choisissez votre langue</div>
+    <div class="lang-btns">
+      <button class="lang-btn fr" id="lang-btn-fr" onclick="chooseLang('fr')">
+        <span class="lang-flag">🇫🇷</span> Français
+      </button>
+      <button class="lang-btn en" id="lang-btn-en" onclick="chooseLang('en')">
+        <span class="lang-flag">🇬🇧</span> English
+      </button>
+    </div>
+    <div class="lang-auto-hint" id="lang-auto-hint"></div>
+  </div>
+
+  <!-- ===== BOOT ===== -->
+  <div id="boot-screen" class="screen">
+    <div class="boot-terminal">
+      <div class="boot-terminal-bar">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot amber"></div>
+        <div class="terminal-dot green"></div>
+        <span class="terminal-title">cyber-abdallah — portfolio v2.0</span>
+        <div class="boot-terminal-meta">
+          <span class="terminal-meta-item">BAUD <span>115200</span></span>
+          <span class="terminal-meta-item">VCC <span>3.3V</span></span>
+          <span class="terminal-meta-item">CLK <span>240MHz</span></span>
+        </div>
+      </div>
+      <div class="boot-terminal-body">
+        <div class="boot-header-line">
+          <span class="boot-logo-text">CYBER ABDALLAH</span>
+          <span class="boot-version" id="boot-sub-text"></span>
+        </div>
+        <div class="boot-lines" id="boot-lines"></div>
+        <button class="enter-btn" id="enter-btn" style="display:none" onclick="enterWorld()"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WORLD MAP ===== -->
+  <div id="world-screen" class="screen">
+    <div class="world-header">
+      <div class="world-title-group">
+        <div class="world-title" id="world-title-text"></div>
+        <div class="world-subtitle" id="world-sub-text"></div>
+      </div>
+      <div class="radar-container">
+        <div class="radar-label">
+          TÉLESCOPE
+          <span>● ORBITAL</span>
+        </div>
+        <svg viewBox="0 0 70 70" width="70" height="70">
+          <!-- Radar circles -->
+          <circle cx="35" cy="35" r="30" fill="none" stroke="#c084fc" stroke-width="0.6" stroke-opacity="0.2"/>
+          <circle cx="35" cy="35" r="20" fill="none" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.15"/>
+          <circle cx="35" cy="35" r="10" fill="none" stroke="#c084fc" stroke-width="0.4" stroke-opacity="0.12"/>
+          <!-- Cross hairs -->
+          <line x1="5"  y1="35" x2="65" y2="35" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.12"/>
+          <line x1="35" y1="5"  x2="35" y2="65" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.12"/>
+          <!-- Sweep line (animated) -->
+          <line class="radar-sweep-line" x1="35" y1="35" x2="35" y2="6"
+            stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.85"/>
+          <!-- Sweep glow trail -->
+          <line class="radar-sweep-line" x1="35" y1="35" x2="48" y2="8"
+            stroke="#c084fc" stroke-width="0.6" stroke-opacity="0.25"
+            style="animation-delay:-0.3s"/>
+          <!-- Blips -->
+          <circle cx="48" cy="22" r="1.5" fill="#38bdf8" opacity="0.7" style="animation:starTwinkle 2s ease-in-out infinite"/>
+          <circle cx="20" cy="44" r="1.0" fill="#a78bfa" opacity="0.55" style="animation:starTwinkle 3s ease-in-out infinite 0.5s"/>
+          <circle cx="52" cy="46" r="1.2" fill="#38bdf8" opacity="0.45" style="animation:starTwinkle 2.5s ease-in-out infinite 1s"/>
+        </svg>
+      </div>
+      <div class="world-right">
+        <div class="world-progress-inline">
+          <div class="world-progress-count" id="progress-world"></div>
+          <div class="world-progress-bar">
+            <div class="world-progress-fill" id="world-progress-fill"></div>
+          </div>
+        </div>
+        <a class="cv-btn" href="cv.pdf" download id="cv-btn">
+          <span class="cv-btn-icon">⬇</span>
+          <span id="cv-btn-label">CV PDF</span>
+        </a>
+      </div>
+    </div>
+    <div class="zones-grid" id="zones-grid"></div>
+    <div class="kbd-hint-world" id="kbd-hint-world"></div>
+  </div>
+
+  <!-- ===== DIALOGUE ===== -->
+  <div id="dialogue-screen" class="screen">
+    <div class="dialogue-container">
+
+      <div class="dialogue-header">
+        <button class="back-btn" id="back-btn" onclick="goBack()"></button>
+        <div class="zone-title-bar">
+          <h2 id="zone-title"></h2>
+          <p id="zone-desc"></p>
+        </div>
+        <div class="dialogue-status">
+          <div class="status-led"><div class="status-led-dot"></div>RX</div>
+          <div class="status-led"><div class="status-led-dot tx" id="tx-led"></div>TX</div>
+        </div>
+      </div>
+
+      <div class="npc-area">
+        <div class="npc-avatar">
+          <div class="npc-face">🤖</div>
+          <div class="npc-pins">
+            <div class="npc-pin" id="npc-pin-1"></div>
+            <div class="npc-pin" id="npc-pin-2"></div>
+            <div class="npc-pin" id="npc-pin-3"></div>
+            <div class="npc-pin" id="npc-pin-4"></div>
+            <div class="npc-pin" id="npc-pin-5"></div>
+          </div>
+          <div class="npc-label">Cyber<br>Abdallah</div>
+        </div>
+        <div class="dialogue-box">
+          <span id="dialogue-text"></span>
+          <span class="dialogue-cursor" id="dialogue-cursor"></span>
+        </div>
+      </div>
+
+      <!-- Timeline (shown for education/xp zones) -->
+      <div id="timeline-area"></div>
+
+      <div class="choices" id="choices-area"></div>
+      <div class="chat-section-label" id="chat-label"></div>
+      <div class="chat-area" id="chat-area"></div>
+
+      <div class="chat-input-row">
+        <input class="chat-input" id="chat-input" onkeydown="if(event.key==='Enter') sendChat()" />
+        <button class="send-btn" id="send-btn" onclick="sendChat()"></button>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-label" id="progress-label"></div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- QR code library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/particles.js"></script>
+
+<script>
+  // Service Worker registration
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  }
+
+  // PWA install prompt
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const btn = document.getElementById('install-btn');
+    if (btn) btn.style.display = 'block';
+  });
+  document.getElementById('install-btn').addEventListener('click', () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+      document.getElementById('install-btn').style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
