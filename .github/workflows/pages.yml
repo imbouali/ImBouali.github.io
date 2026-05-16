@@ -26,11 +26,11 @@ jobs:
 
       - name: Inject API config
         run: |
-          printf "const GEMINI_KEY = '%s';\n" "$REQUESTY_KEY" > js/config.js
-          printf "const GEMINI_URL = 'https://router.requesty.ai/v1/chat/completions';\n" >> js/config.js
+          printf "const GEMINI_KEY = '%s';\n" "$MISTRAL_KEY" > js/config.js
+          printf "const GEMINI_URL = 'https://api.mistral.ai/v1/chat/completions';\n" >> js/config.js
           printf "const ZONE_COUNT = 6;\n" >> js/config.js
         env:
-          REQUESTY_KEY: ${{ secrets.REQUESTY_KEY }}
+          MISTRAL_KEY: ${{ secrets.MISTRAL_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
