@@ -184,7 +184,7 @@ function renderChoices(choices) {
     btn.onclick = () => {
       if (['Retour à la carte', 'Back to map'].includes(c)) { goBack(); return; }
       area.innerHTML = '';
-      askGemini(c);
+      askMistral(c);
     };
     area.appendChild(btn);
   });
@@ -493,22 +493,22 @@ async function sendChat() {
   if (!msg) return;
   inp.value = '';
   addChatMsg(msg, 'user');
-  await askGemini(msg);
+  await askMistral(msg);
 }
 
-// ===== GEMINI API =====
+// ===== MISTRAL API =====
 
-async function askGemini(userMsg) {
+async function askMistral(userMsg) {
   const btn = document.getElementById('send-btn');
   btn.disabled = true;
   showTyping();
 
   try {
-    const res = await fetch(GEMINI_URL, {
+    const res = await fetch(MISTRAL_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${GEMINI_KEY}`
+        'Authorization': `Bearer ${MISTRAL_KEY}`
       },
       body: JSON.stringify({
         model: 'open-mistral-7b',
