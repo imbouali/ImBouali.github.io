@@ -511,7 +511,7 @@ async function askGemini(userMsg) {
         'Authorization': `Bearer ${GEMINI_KEY}`
       },
       body: JSON.stringify({
-        model: 'mistral-small-latest',
+        model: 'open-mistral-7b',
         messages: [
           { role: 'system', content: T[lang].sysPrompt },
           { role: 'user',   content: userMsg }
