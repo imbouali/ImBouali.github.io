@@ -24,14 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject API config
-        run: |
-          printf "const GEMINI_KEY = '%s';\n" "$MISTRAL_KEY" > js/config.js
-          printf "const GEMINI_URL = 'https://api.mistral.ai/v1/chat/completions';\n" >> js/config.js
-          printf "const ZONE_COUNT = 6;\n" >> js/config.js
-        env:
-          MISTRAL_KEY: ${{ secrets.MISTRAL_KEY }}
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

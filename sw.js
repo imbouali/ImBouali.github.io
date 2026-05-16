@@ -1,4 +1,4 @@
-const CACHE = 'cyber-abdallah-v11';
+const CACHE = 'cyber-abdallah-v12';
 const ASSETS = [
   '/', '/index.html', '/favicon.svg', '/manifest.json',
   '/css/styles.css',
