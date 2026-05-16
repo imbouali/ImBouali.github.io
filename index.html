@@ -294,9 +294,11 @@
 <script src="js/particles.js"></script>
 
 <script>
-  // Service Worker registration
+  // Service Worker desactive (evite les problemes de cache)
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      regs.forEach(r => r.unregister());
+    });
   }
 
   // PWA install prompt
